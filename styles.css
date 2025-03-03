@@ -1,0 +1,14 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .border{
+    display: block;
+    height: 500px;
+    border-radius: 15px;
+    border-style: solid;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 150px;
+  }
