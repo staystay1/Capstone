@@ -22,3 +22,4 @@ let linkinfo = async (url) => {
 };
 
 linkinfo("google.com"); // function call, note: replace with a onclick button function later.
+debugger;
