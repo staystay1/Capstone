@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   padding: 0;
@@ -35,8 +36,8 @@ body {
 .box i {
   position: absolute;
   top: 50%;
-  left: 50%; /* Change from `right` to `left` for centering */
-  transform: translate(-50%, -50%); /* Center horizontally and vertically */
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 26px;
   color: #ffd52d;
   pointer-events: none;
@@ -46,3 +47,17 @@ body {
   opacity: 0;
   z-index: -1;
 }
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .border{
+    display: block;
+    height: 500px;
+    border-radius: 15px;
+    border-style: solid;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 150px;
+  }
