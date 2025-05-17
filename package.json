@@ -1,0 +1,16 @@
+{
+  "name": "capstone-server",
+  "version": "0.0.0",
+  "private": true,
+ "scripts": {
+  "start": "BROWSER=none react-scripts start & sleep 1 && open -a 'Opera Air' http://localhost:3000"
+},
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
+  }
+}
