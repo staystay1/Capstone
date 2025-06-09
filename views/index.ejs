@@ -10,16 +10,32 @@
       href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
     <div class="box3">
-      <p>Phishing Website Info:</p>
       <div class="box2">
-        <p class="boxtxt">
-          For your information, please don't put weird links...
+        <p
+          class="boxtxt"
+          style="
+            max-width: 300px;
+            margin: 0 auto;
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: center;
+          "
+        >
+          This website is to gather information about links you want to visit.
+          For example, you can check how many times YouTube has been targeted
+          for malicious data. P.S, please refrain from requesting data more than
+          4 times within a minute (sixty/60 seconds). Please don't put
+          inappropriate links.
         </p>
       </div>
     </div>
@@ -83,16 +99,23 @@
     </div>
 
     <div class="box">
-      <form name="search">
+      <form name="search" onsubmit="handleLinkInfo(event)">
         <input
           type="text"
           class="input"
           name="txt"
-          onmouseout="this.value = ''; this.blur();"
+          id="urlInput"
+          placeholder="Example.com"
         />
       </form>
       <i class="fas fa-search"></i>
     </div>
+
+    <div class="output-box">
+      <h3>Link Analysis Results:</h3>
+      <div id="output"></div>
+    </div>
+
     <script src="/javascripts/script.js"></script>
   </body>
 </html>
