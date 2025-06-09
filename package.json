@@ -1,24 +1,19 @@
 {
-  "dependencies": {
-    "axios": "^1.8.2"
-  },
-  "name": "capstone",
-  "version": "1.0.0",
-  "description": "This project",
-  "main": "script.js",
-  "devDependencies": {},
+  "name": "capstone-server",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/staystay1/Capstone.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/staystay1/Capstone/issues"
-  },
-  "homepage": "https://github.com/staystay1/Capstone#readme"
+  "dependencies": {
+    "axios": "^1.9.0",
+    "body-parser": "^2.2.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
+  }
 }

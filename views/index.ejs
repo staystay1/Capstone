@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <p>Welcome to <%= title %></p>
+    <div class="box3">
+      <div class="box2">
+        <p
+          class="boxtxt"
+          style="
+            max-width: 300px;
+            margin: 0 auto;
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: center;
+          "
+        >
+          This website is to gather information about links you want to visit.
+          For example, you can check how many times YouTube has been targeted
+          for malicious data. P.S, please refrain from requesting data more than
+          4 times within a minute (sixty/60 seconds). Please don't put
+          inappropriate links.
+        </p>
+      </div>
+    </div>
+
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn">More Info</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p class="modaltxt">Examples of Broken Links and their Errors:</p>
+        <ul class="exs">
+          <li>
+            website.com/domain-%comp. - results into a 400 bad request error.
+            Usually occurs due to the user mistyping in the URL.
+          </li>
+          <li>
+            www.website.com/shop/domain/ - lets say a website from the old
+            domain you copied changed into a new domain, that old domain
+            wouldn't be accesable anymore.
+          </li>
+          <li>
+            www.website.com/shop/domain/ - the same link can also cause a 404
+            error page. This results due to the domain being deleted or not
+            updated
+          </li>
+        </ul>
+
+        <ul class="exs2">
+          <p class="modaltxt">To Learn More</p>
+          <li>
+            <a href="https://www.semrush.com/blog/broken-link/">
+              Semrush Blog</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.pixelfish.com.au/blog/most-common-website-errors/"
+            >
+              Pixel Fish</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.pingdom.com/blog/the-5-most-common-http-errors-according-to-google/"
+            >
+              Pingdom</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status"
+            >
+              Modzilla Web Docs</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box">
+      <form name="search" onsubmit="handleLinkInfo(event)">
+        <input
+          type="text"
+          class="input"
+          name="txt"
+          id="urlInput"
+          placeholder="Example.com"
+        />
+      </form>
+      <i class="fas fa-search"></i>
+    </div>
+
+    <div class="output-box">
+      <h3>Link Analysis Results:</h3>
+      <div id="output"></div>
+    </div>
+
+    <script src="/javascripts/script.js"></script>
+  </body>
+</html>
